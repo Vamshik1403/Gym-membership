@@ -1,0 +1,103 @@
+{% load static %}
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="{% static 'images' %}" type="image/x-icon">
+
+    <!--=============== REMIXICON ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link href="{% static 'styles.css' %}" rel="stylesheet">
+
+    <title>Responsive gym website - Bedimcode</title>
+
+<!--==================== HEADER ====================-->
+<header class="header" id="header">
+    <nav class="nav container">
+        <a href="#" class="nav__logo">
+            <img src="{% static 'images/logo-nav.png' %}" alt="My image"> FITEST
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="/home" class="nav__link active-link">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="/program" class="nav__link">Program</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="/product" class="nav__link">Products</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="/pricing" class="nav__link">Pricing</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="/bmi" class="nav__link">BMI</a>
+                </li>
+
+                {% if user.is_authenticated %}
+                
+                <li class="nav__item">
+                    <a href="/enroll" class="nav__link">Enroll</a>
+                </li>
+                
+                
+                <li class="nav__item">
+                    <a href="/logout" class="nav__link">Logout</a>
+                </li>
+              
+                
+
+                {% else %}
+                <li class="nav__item">
+                    <a href="/login" class="nav__link">Login</a>
+                </li>
+
+                <div class="nav__link">
+                    <a href="/register" class="button nav__button">
+                        Register Now
+                    </a>
+                    {% endif %}
+                </div>
+            </ul>
+
+            <div class="nav__close" id="nav-close">
+                <i class="ri-close-line"></i>
+            </div>
+        </div>
+
+        <!-- Toggle button -->
+        <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line"></i>
+        </div>
+    </nav>
+</header>
+
+
+<body>
+  <!--========== SCROLL UP ==========-->
+  <a href="#" class="scrollup" id="scroll-up">
+    <i class="ri-arrow-up-line"></i>
+</a>
+
+<!--=============== SCROLLREVEAL ===============-->
+<script src="{% static 'js/scrollreveal.min.js' %}"></script>
+
+<!--=============== EMAIL JS ===============-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<!--=============== MAIN JS ===============-->
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% block 'content' %}
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICON ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link href="{% static 'styles.css' %}" rel="stylesheet">
+    <title>Responsive gym website - </title>
+</head>
+<body>
+    <form action="" method='POST'>
+<!-- PRODUCTS SECTION -->
+<section class="products | padding-block-900 bg-secondary" id="products-section">
+    <div class="container">
+        <h2 class="fs-secondary-heading fw-bold uppercase text-center"><span class="special-text">Our</span> Products</h2>
+        {% for product in products %}  
+        <div class="items-wrapper padding-block-700">
+           
+            <div class="product-item bg-dark" id="p1">
+                <div class="product-item-content">
+                    <img
+                    src="{{product.pimage.url}}"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                    <h3 class="product1">{{product.name}}</h3>
+                    <p class="product_price">{{product.price}}</p>
+                    <a href="/productdetails/{{product.id}}" class="button button__flex pricing__button">
+                        Buy Now <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+            {% endfor %} 
+            
+            {% comment %} <div class="product-item bg-dark" id="p2">
+                <img src="{% static 'images/product2.png' %}" alt="My image">
+                <div class="product-item-content">
+                    <h3 class="fw-semi-bold fs-700 special-text">Item 2</h3>
+                    <p>$55.00</p>
+                    <a href="/productdetails" class="button button__flex pricing__button">
+                        Buy Now <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="product-item bg-dark" id="p3">
+                <img src="{% static 'images/product3.png' %}" alt="My image">
+                <div class="product-item-content">
+                    <h3 class="fw-semi-bold fs-700 special-text">Item 3</h3>
+                    <p>$55.00</p>
+                    <a href="/productdetails" class="button button__flex pricing__button">
+                        Buy Now <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="product-item bg-dark" id="p4">
+                <img src="{% static 'images/product4.png' %}" alt="My image">
+                <div class="product-item-content">
+                    <h3 class="fw-semi-bold fs-700 special-text">Item 4</h3>
+                    <p>$55.00</p>
+                    <a href="/productdetails" class="button button__flex pricing__button">
+                        Buy Now <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+         {% endcomment %}
+        <br><br><br><br>
+    </div>
+    <button class="btn" data-type="btn-secondary">Explore More...</button>
+</div>
+    </div>
+    </div>
+</form>
+</section>
+
+ <!--========== SCROLL UP ==========-->
+ <a href="#" class="scrollup" id="scroll-up">
+    <i class="ri-arrow-up-line"></i>
+</a>
+
+<!--=============== SCROLLREVEAL ===============-->
+<script src="{% static 'js/scrollreveal.min.js' %}"></script>
+
+<!--=============== EMAIL JS ===============-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<!--=============== MAIN JS ===============-->
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
+
+{% endblock 'content' %}

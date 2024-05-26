@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block 'content' %}
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+
+
+    <!--=============== REMIXICON ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link href="{% static 'styles.css' %}" rel="stylesheet">
+
+    <title>Responsive gym website - Bedimcode</title>
+</head>
+
+<body>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <h2 class="home__subtitle">MAKE YOUR</h2>
+                    <h1 class="home__title">BODY SHAPE</h1>
+                    <p class="home__description">
+                        In here we will help you to shape and build your ideal
+                        body and live your life to the fullest.
+                    </p>
+                    <a href="/program" class="button button__flex">
+                        Get Started <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+
+                <div class="home__images">
+                    <img src="{% static 'images/home-img.png' %}" alt="My image">
+
+                    <div class="home__triangle home__triangle-3"></div>
+                    <div class="home__triangle home__triangle-2"></div>
+                    <div class="home__triangle home__triangle-1"></div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== LOGOS ====================-->
+        <section class="logos section">
+            <div class="logos__container container grid">
+                <img src="{% static 'images/logo1.png' %}" alt="My image">
+                <img src="{% static 'images/logo2.png' %}" alt="My image">
+                <img src="{% static 'images/logo3.png' %}" alt="My image">
+                <img src="{% static 'images/logo4.png' %}" alt="My image">
+            </div>
+        </section>
+
+       
+
+
+
+
+
+        
+    
+
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+    </a>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="{% static 'js/scrollreveal.min.js' %}" type="text/javascript"></script> 
+
+    <!--=============== EMAIL JS ===============-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="{% static 'js/script.js' %}" type="text/javascript"></script> 
+</body>
+
+</html>
+
+{% endblock 'content' %}

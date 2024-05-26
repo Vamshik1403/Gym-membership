@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block 'content' %}
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICON ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+    <title>Responsive gym website - Bedimcode</title>
+</head>
+  <body>
+    <main class="container">
+
+      <!-- Left Column / Headphones Image -->
+      <div class="left-column">
+        
+        <img src="{{product.pimage.url}}" class="img-fluid" alt="..."> 
+        <img src="{% static 'images/product1.png' %}" alt="My image">
+         <img data-image="black" src="images/black.png" alt="">
+        <img data-image="blue" src="images/blue.png" alt="">
+        <img data-image="red" class="active" src="images/red.png" alt=""> 
+      </div>
+
+
+      <!-- Right Column -->
+      <div class="right-column">
+        <!-- Product Description -->
+        <div class="product-description">
+          
+          <h1>Product Name:{{product.name}}</h1>
+          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        </div>
+
+        <!-- Product Configuration -->
+        <div class="product-configuration">
+
+          <!-- Product Color -->
+          <div class="product-color">
+            <span>Flavour</span>
+
+            <div class="cable-choose">
+              <button>Chocolate</button>
+              <button>Strawberry</button>
+              <button>Salted Caramel</button>
+          
+        </div>
+          </div>
+
+          <!-- Cable Configuration -->
+
+            <div class="cable-choose">
+              <button>500gm</button>
+              <button>1kg</button>
+              <button>2kg</button>
+          
+        </div>
+
+        <!-- Product Pricing -->
+        <div class="product-price">
+          <span>Price:{{product.price}}</span>
+          <a href="/addtocart" class="cart-btn">Add to cart</a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script src="script.js" charset="utf-8"></script>
+  </body>
+</html>
+{% endblock 'content' %}

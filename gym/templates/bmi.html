@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block 'content' %}
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICON ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link href="{% static 'styles.css' %}" rel="stylesheet">
+    <title>Responsive gym website - Bedimcode</title>
+</head>
+
+
+<body>
+<div class='container'>
+<section class="calculate section" id="bmi">
+    <div class="calculate__container container grid">
+        <div class="calculate__content">
+            <div class="section__titles">
+                <h1 class="section__title-border">CALCULATE</h1>
+                <h1 class="section__title">YOUR BMI</h1>
+            </div>
+
+            <p class="calculate__description">
+                The body mass index (BMI) calculator calculates
+                body mass index from your weight and height.
+            </p>
+
+            <form action="" class="calculate__form" id="calculate-form">
+                <div class="calculate__box">
+                    <input type="number" placeholder="Height" class="calculate__input" id="calculate-cm">
+                    <label for="" class="calculate__label">cm</label>
+                </div>
+                <div class="calculate__box">
+                    <input type="number" placeholder="Weight" class="calculate__input" id="calculate-kg">
+                    <label for="" class="calculate__label">kg</label>
+                </div>
+
+                <button type="submit" class="button button__flex">
+                    Calculate Now <i class="ri-arrow-right-line"></i>
+                </button>
+            </form>
+
+            <p class="calculate__message" id="calculate-message"></p>
+        </div>
+
+        <img src="{% static 'images/calculate-img.png' %}" alt="Your Image" class="calculate__img">
+    </div>
+</div>
+</section>
+
+
+
+ <!--========== SCROLL UP ==========-->
+ <a href="#" class="scrollup" id="scroll-up">
+    <i class="ri-arrow-up-line"></i>
+</a>
+
+<!--=============== SCROLLREVEAL ===============-->
+<script src="{% static 'js/scrollreveal.min.js' %}"></script>
+
+<!--=============== EMAIL JS ===============-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<!--=============== MAIN JS ===============-->
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
+
+{% endblock 'content' %}
+
+
+
+
+   

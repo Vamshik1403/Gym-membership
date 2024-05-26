@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% block 'content' %}
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICON ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link href="{% static 'styles.css' %}" rel="stylesheet">
+    <title>Responsive gym website - Bedimcode</title>
+</head>
+<body>
+ 
+ <!--==================== PROGRAM ====================-->
+ <section class="program section" id="program">
+    <div class="container">
+        <div class="section__data">
+            <h2 class="section__subtitle">Our Program</h2>
+            <div class="section__titles">
+                <h1 class="section__title-border">BUILD YOUR</h1>
+                <h1 class="section__title">BEST BODY</h1>
+            </div>
+        </div>
+
+        <div class="program__container grid">
+            <article class="program__card">
+                <div class="program__shape">
+                    <img src="{% static 'images/program1.png' %}" alt="My image">
+                </div>
+
+                <h3 class="program__title">Flex Muscle</h3>
+
+                <p class="program__description">
+                    Creating tension that's temporarily making the muscle
+                    fibers smaller or contracted.
+                </p>
+
+                <a href="/product" class="program__button">
+                    <i class="ri-arrow-right-line"></i>
+                </a>
+            </article>
+
+            <article class="program__card">
+                <div class="program__shape">
+                    <img src="{% static 'images/program2.png' %}" alt="My image">
+                </div>
+
+                <h3 class="program__title">Cardio Exercise</h3>
+
+                <p class="program__description">
+                    Exercise your heart rate up and keeps it
+                    up for a prolonged period of time.
+                </p>
+
+                <a href="/product" class="program__button">
+                    <i class="ri-arrow-right-line"></i>
+                </a>
+            </article>
+
+            <article class="program__card">
+                <div class="program__shape">
+                    <img src="{% static 'images/program3.png' %}" alt="My image">
+                </div>
+
+                <h3 class="program__title">Basic Yoga</h3>
+
+                <p class="program__description">
+                    Diaphragmatic this is the most common breathing
+                    technique you'll find in yoga.
+                </p>
+
+                <a href="/product" class="program__button">
+                    <i class="ri-arrow-right-line"></i>
+                </a>
+            </article>
+
+            <article class="program__card">
+                <div class="program__shape">
+                    <img src="{% static 'images/program4.png' %}" alt="My image">
+                </div>
+
+                <h3 class="program__title">Weight Lifting</h3>
+
+                <p class="program__description">
+                    Attempts a maximum weight single lift of a
+                    barbell loaded with weight plates.
+                </p>
+
+                <a href="/product" class="program__button">
+                    <i class="ri-arrow-right-line"></i>
+                </a>
+            </article>
+        </div>
+    </div>
+</section>
+
+ <!--========== SCROLL UP ==========-->
+ <a href="#" class="scrollup" id="scroll-up">
+    <i class="ri-arrow-up-line"></i>
+</a>
+
+<!--=============== SCROLLREVEAL ===============-->
+<script src="{% static 'js/scrollreveal.min.js' %}"></script>
+
+<!--=============== EMAIL JS ===============-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<!--=============== MAIN JS ===============-->
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
+
+{% endblock 'content' %}
