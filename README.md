@@ -1,2 +1,2 @@
 # Gym-membership
- Gym membership webiste
+ Gym membership website
